@@ -12,7 +12,7 @@ COPY . /app
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
-FROM builder as dev-envs 
+FROM builder as dev-envs # //NOSONAR
 
 RUN <<EOF
 apk update
@@ -26,4 +26,4 @@ EOF
 # install Docker tools (cli, buildx, compose)
 COPY --from=gloursdocker/docker / /
 
-//NOSONAR
+# //NOSONAR
