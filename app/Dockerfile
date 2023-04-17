@@ -12,7 +12,7 @@ COPY . /app
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
-# //NOSONAR
+//NOSONAR
 FROM builder as dev-envs 
 
 RUN <<EOF
